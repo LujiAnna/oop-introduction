@@ -2,18 +2,6 @@
 
 declare(strict_types=1);
 
-/* EXERCISE 1
-- [x] Create a class beverage.
-- [x] Create the properties color (string), price (float) and temperature (string) and also foresee a construct.
-Have a default value "cold" in the construct for temperature.
-- [x] Remember for now we will use properties and methods that can be accessed from everywhere.
-- [x] Make a getInfo function which returns "This beverage is <temperature> and <color>."
-- [x] Instantiate an object which represents cola. Make sure that the color is set to black, the price equals 2 euro and the temperature to cold automatically
-- [x] print the getInfo on the screen.
-- [x] print the temperature on the screen.
-- [x] USE TYPEHINTING EVERYWHERE!
-*/
-
 // test
 // echo 'hello world!';
 
@@ -25,13 +13,39 @@ error_reporting(E_ALL);
 // TODO: include/require it here in index, maybe
 
 require 'Beverage.php';
+require 'Beer.php';
 
-// create class
+echo "<br><br> Exercise 1:<br>";
+// Instantiate an object which represents cola
 $cola = new Beverage('black', 2, '');
 // ERROR: assign a variable doesn't work, shows Color: {this->color}, this has to be a variable as $this
 // $cola->color = 'Cyan';
 // $cola->getInfo();
 // var_dump($cola);
+
+// call getInfo method
 echo $cola->getInfo();
+
+// Instantiate an object which represents Duvel
+
+// $Duvel = new Beer('Duvel', 0.85);
+$Duvel = new Beer("blond", 3.5, "", "Duvel", 0.85);
+
+// var_dump($Duvel);
+
+echo "<br><br> Exercise 2:<br>";
+echo $Duvel -> getAlcoholpercentage();
+// print tAlcoholpercentage in a different way 
+echo "Alcohol percentage : ";
+echo $Duvel ->name = 'Duvel';
+echo $Duvel ->alcoholopercentage = 0.85;
+
+echo "<br>";
+// print Color
+echo "Color : ";
+echo $Duvel ->color = 'blond';
+// print Try to get this error on the screen= Fatal error: Uncaught Error: Call to undefined method Beverage::getAlcoholpercentage() in /var/www/becode/workshop/exercise2.php on line 64
+echo "<br>";
+echo $Duvel -> getInfo();
 
 ?>
