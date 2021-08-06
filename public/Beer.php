@@ -13,6 +13,7 @@ declare(strict_types=1);
 - [x] print the getAlcoholpercentage 2 times on the screen in two different ways, print the color on the screen and the getInfo.
 - [x] Make sure that each print is on a different line.
 - [?] Try to get this error on the screen= Fatal error: Uncaught Error: Call to undefined method Beverage::getAlcoholpercentage() in /var/www/becode/workshop/exercise2.php on line 64
+find out what this error is first
 - [x] USE TYPEHINTING EVERYWHERE!
 */
 
@@ -21,7 +22,14 @@ class Beer extends Beverage
  public string $name;
  public float $alcoholpercentage;
 
-public function __construct (string $color, float $price, string $temperature, string $name, float $alcoholpercentage) {
+ public function getAlcoholpercentage(){
+  return "This {$this->name} has {$this->alcoholpercentage}% alcohol. <br>";
+// if VARIABLE needs to be passes/accessed, need to pass variable $newName
+// $this->name = $newName;
+}
+
+public function __construct (string $color, float $price, string $temperature, string $name, float $alcoholpercentage) 
+{
 
   $this->name = $name;
   $this->alcoholpercentage = $alcoholpercentage;
@@ -33,9 +41,6 @@ public function __construct (string $color, float $price, string $temperature, s
 
 }
 
-public function getAlcoholpercentage(){
-  return "This {$this->name} has {$this->alcoholpercentage}% alcohol. <br>";
 
-}
 
 }

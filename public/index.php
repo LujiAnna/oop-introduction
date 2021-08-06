@@ -9,11 +9,13 @@ ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
-// Create  a class beverage
-// TODO: include/require it here in index, maybe
-
+// Ex:1
 require 'Beverage.php';
+// Ex: 2
 require 'Beer.php';
+// Ex: 3
+// require 'Light.php';
+
 
 echo "<br><br> Exercise 1:<br>";
 // Instantiate an object which represents cola
@@ -26,16 +28,18 @@ $cola = new Beverage('black', 2, '');
 // call getInfo method
 echo $cola->getInfo();
 
-// Instantiate an object which represents Duvel
 
-// $Duvel = new Beer('Duvel', 0.85);
+// These are now private classes
+
+// use PhpPrivateAccess\Beer;
+
 $Duvel = new Beer("blond", 3.5, "", "Duvel", 0.85);
 
 // var_dump($Duvel);
 
 echo "<br><br> Exercise 2:<br>";
 echo $Duvel -> getAlcoholpercentage();
-// print tAlcoholpercentage in a different way 
+// print Alcoholpercentage in a different way 
 echo "Alcohol percentage : ";
 echo $Duvel ->name = 'Duvel';
 echo $Duvel ->alcoholopercentage = 0.85;

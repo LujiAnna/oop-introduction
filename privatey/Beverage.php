@@ -17,7 +17,6 @@ declare(strict_types=1);
 class Beverage {
 
   // Create Properties which can be accessed everywhere
-  // TODO: Error!! Type hinting gives syntax error - Version PHP
   public string $color;
   // var_dump($this->color); // error doesnt work
   public float $price;
